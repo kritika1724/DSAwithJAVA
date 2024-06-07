@@ -1,28 +1,29 @@
 import java.util.Scanner;
-
 public class linearsearch {
-    public linearsearch() {
-    }
-
-    public static void main(String[] var0) {
-        int[] var1 = new int[5];
-        Scanner var2 = new Scanner(System.in);
-
-        int var3;
-        for(var3 = 0; var3 < var1.length; ++var3) {
-            var1[var3] = var2.nextInt();
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter size of array");//input size of array
+        int size = sc.nextInt();
+        int[] array = new int[size];//create array
+        for(int i = 0; i < array.length; ++i)
+        {
+            array[i] = sc.nextInt();//input array elements
         }
-
         System.out.println("Enter key to search");
-        var3 = var2.nextInt();
-
-        for(int var4 = 0; var4 < var1.length; ++var4) {
-            if (var1[var4] == var3) {
-                System.out.println("key is found at position " + (var4 + 1) + " in array");
-                break;
+        int key = sc.nextInt();//enter key to be searched
+        for(int i = 0; i < array.length; ++i)
+        {
+            if (array[i] == key)
+            {
+                System.out.println("key is found at position " + (i + 1) + " in array");
+                return;
+            }
+            else
+            {
+                continue;
             }
         }
-
         System.out.println("key is not present in array");
     }
 }
+
