@@ -11,24 +11,24 @@ public class binarysearch {
         }
         System.out.println("Enter key to search");
         int key = sc.nextInt();//enter key to be searched
-        int start=0;
-        int end=array.length-1;
+        int start=0;//startindex
+        int end=array.length-1;//endindex
         int midelement;
         while(start<=end)
         {
-            midelement=(start+end)/2;
+            midelement=(start+end)/2;//calculate midelement
             if(array[midelement]==key)
             {
-             System.out.println("key is found at index"+(midelement+1));
+             System.out.println("key is found at index "+(midelement+1));
              break;
             }
             else if(array[midelement]>key)
             {
-            end=midelement-1;
+            end=midelement-1;//left subarray
             }
             else
             {
-            start=midelement+1;
+            start=midelement+1;//rightsubarray
             }
         }
     }
