@@ -5,6 +5,7 @@ public class linearsearch {
         System.out.println("Enter size of array");//input size of array
         int size = sc.nextInt();
         int[] array = new int[size];//create array
+        System.out.println("Enter array elements");
         for(int i = 0; i < array.length; ++i)
         {
             array[i] = sc.nextInt();//input array elements
