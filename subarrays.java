@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class pairsinarray {
-       public static void main(String args[]){
+
+public class subarrays {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of array");//input size of array
         int size = sc.nextInt();
@@ -10,15 +11,20 @@ public class pairsinarray {
         {
             array[i] = sc.nextInt();//input array elements
         }
-        //print pairs
-        int c=1;
+        //print subarrays
         for(int i=0;i<array.length;++i)
         {
-            for(int j=i+1;j<array.length;++j)
+            System.out.println("Subarray starting with "+array[i]);
+            for(int j=(array.length-1);j>0;--j)
             {
-                System.out.println("pair "+c+" is "+"("+array[i]+","+array[j]+")");
-                c++;
-            } 
+               if(i>j)
+               {break;}
+               for(int k=i;k<=j;k++)
+               {
+                System.out.print(array[k]);
+               }
+               System.out.println();
+            }
         }
-    }
+}
 }
