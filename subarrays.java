@@ -21,7 +21,7 @@ public class subarrays {
                {break;}
                for(int k=i;k<=j;k++)
                {
-                System.out.print(array[k]);
+                System.out.print(array[k]+" ");
                }
                System.out.println();
             }
