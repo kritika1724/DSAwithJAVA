@@ -6,6 +6,7 @@ public class spiralmatrix {
         int endrow=matrix.length-1;
         int endcol=matrix[0].length-1;
         while(startrow<=endrow&&startcol<=endcol)
+        
         {
             //top
             for(int j=startcol;j<=endcol;++j)
