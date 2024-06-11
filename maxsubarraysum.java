@@ -18,14 +18,16 @@ public class maxsubarraysum {
         currsum+=array[i];
         if(currsum<0)
         {
+            //if currsum becomes less than zero than its better to make currsum=0 rather than any -ve value
             currsum=0;
         }
         if(currsum>maxsum)
         {
+            //updating maxsum
             maxsum=currsum;
         }
     }
-    System.out.println(maxsum);
+    System.out.println("Max subarray sum:"+maxsum);
 
 
     
